@@ -1,0 +1,51 @@
+<UI>:
+    id:scr_manager
+    SCR1:
+    SCR2:
+#หน้า 1
+<SCR1>:
+    name: "SCR1"
+    canvas.before:
+        Rectangle:
+            source: "scr.jpg"
+            size: root.width, root.height
+            pos: self.pos
+  
+    Button:
+        pos_hint:{'center_X':0.5, 'center_y':0.5}
+        size_hint: 1.0, 0.3
+        text: "แปลเลขฐาน"
+        font_name:"tahoma"
+        on_press: app.root.current = "SCR2"
+
+<SCR2>:
+    name: "SCR2"
+    BoxLayout:
+        orientation:'vertical'
+        Button:
+            text:"back"
+            on_press: app.root.current = "SCR1"
+            size_hint: 0.3, 0.3
+        TextInput:
+            id: txt_number
+        BoxLayout:
+            ToggleButton:
+                text: "base 2"
+                group: 'convert_mode'
+                on_press: root.convert(*args)
+                font_name:"tahoma"
+            ToggleButton:
+                text: "base 8"
+                group: 'convert_mode'
+                on_press: root.convert(*args)
+                font_name:"tahoma"
+            ToggleButton:
+                text: "base 16"
+                group: 'convert_mode'
+                on_press: root.convert(*args)
+                font_name:"tahoma"
+        Label:
+            id: lbl_output
+
+
+   
