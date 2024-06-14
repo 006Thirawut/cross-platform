@@ -1,0 +1,91 @@
+<UI>:
+    id: scr_manager
+    Scr_landing:
+    Scr_invest:
+
+<Scr_landing>:
+    name: "Scr_landing"
+    bg_color: "purple"
+    background_color: [0.5, 0, 0.5, 1]
+    Button:
+        background_color: "DAB9E6"
+    BoxLayout:
+        orientation: 'vertical'
+        Image:
+            source: "1.jpg"
+            size_hint: 0.60, 0.40
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        Button:
+            text: 'เข้าสู่ระบบ'
+            font_name: 'tahoma'
+            background_color: "yellow"
+            size_hint: 0.40, 0.20
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            on_press: app.root.current = "Scr_invest"
+        Button:
+            text: 'ลงทะเบียนใหม่'
+            background_color: "purple"
+            font_name: 'tahoma'
+            size_hint: 0.40, 0.20
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            on_press: app.root.current = "Scr_invest"
+        Button:
+            text: 'For_Foreigner'
+            background_color: "blue"
+            font_name: 'tahoma'
+            size_hint: 0.40, 0.20
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            on_press: app.root.current = "Scr_invest"
+        Image:
+            source: "Line.png"
+            size_hint: 0.40, 0.20
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+<Scr_invest>:
+    name: "Scr_invest"
+    Button:
+        background_color: "DAB9E6"
+    BoxLayout:
+        orientation: 'vertical'
+        Image:
+            source: "1.jpg"
+            size_hint: 0.60, 0.40
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        TextInput:
+            hint_text:'ระบุเลขบัตรประชาชน'
+            font_name: 'tahoma'
+            size_hint: 0.90, 0.10
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        TextInput:
+            hint_text:'ระบุเลขบัตรประชาชนอีกครั้ง'
+            font_name: 'tahoma'
+            size_hint: 0.90, 0.10
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        TextInput:
+            hint_text:'ระบุเบอร์โทรศัพท์'
+            font_name: 'tahoma'
+            size_hint: 0.90, 0.10
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        TextInput:
+            hint_text:'ระบุอีเมล'
+            font_name: 'tahoma'
+            size_hint: 0.90, 0.10
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        Button:
+            id: btn_regis
+            text: 'ดำเนินการต่อ'
+            font_name: "tahoma"
+            background_color: "purple"
+            size_hint: 0.90, 0.10
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            on_press: root.cal_sum()
+        Label:
+            id: lbl_average
+            font_name: "tahoma"
+            size_hint: 0.90, 0.10
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+          
+<Label@Label>:
+    font_name:"tahoma"
+            
